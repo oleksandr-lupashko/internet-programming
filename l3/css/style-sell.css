@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.split-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel-summary {
+    width: 45%;
+    background: url('../assects/side_background2.svg') no-repeat center center, linear-gradient(135deg, #e040fb, #651fff);
+    background-size: cover;
+    padding: 60px;
+    color: white;
+}
+
+.summary-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-svg {
+    width: 45px;
+    margin-bottom: 15px;
+}
+
+.order-details {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.color-indicator {
+    width: 6px;
+    height: 35px;
+    background-color: #03A9F4;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h2 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.item-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+.item-price {
+    text-align: right;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 25px 0;
+}
+
+.summary-totals {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.total-label, .total-amount {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.summary-footer {
+    margin-top: 30px;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.right-panel-form {
+    width: 55%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.checkout-form {
+    width: 100%;
+    max-width: 420px;
+}
+
+.btn-paypal {
+    background-color: #03A9F4;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.form-group {
+    border: none;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.custom-input-wrapper {
+    position: relative;
+    display: block; 
+}
+
+.custom-input-wrapper input {
+    padding-right: 70px; 
+}
+
+.card-icons {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.card-icons img {
+    height: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 12px;
+    height: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+}
+
+.split-inputs {
+    display: flex;
+    margin-top: -1px; 
+}
+
+.split-inputs input, .split-inputs .custom-input-wrapper {
+    width: 50%;
+}
+
+.split-inputs .custom-input-wrapper input {
+    padding-right: 40px;
+}
+
+.top-box {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.bottom-box {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: -1px;
+}
+
+.bottom-left-box {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.bottom-right-box input {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-left: none !important;
+}
+
+.btn-primary {
+    background-color: #03A9F4;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}

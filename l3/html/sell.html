@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style-sell.css">
+</head>
+<body>
+    <main class="split-container">
+        
+        <aside class="left-panel-summary">
+            <header class="summary-header">
+                <img src="../assects/logo.svg" alt="Pinterest Logo" class="logo-svg">
+                <h1>Complete your purchase</h1>
+            </header>
+
+            <section class="order-details">
+                <article class="order-item">
+                    <span class="color-indicator"></span>
+                    <section class="item-info">
+                        <h2>Golden Penny Spread</h2>
+                        <p class="item-meta"><span>SN43500</span><span>12:50 PM</span></p>
+                    </section>
+                    <section class="item-price">
+                        <p>AUG 5</p>
+                        <h3>$14.79</h3>
+                    </section>
+                </article>
+
+                <article class="order-item">
+                    <span class="color-indicator"></span>
+                    <section class="item-info">
+                        <h2>Orange Blossom Honey</h2>
+                        <p class="item-meta"><span>SN76500</span><span>12:50 PM</span></p>
+                    </section>
+                    <section class="item-price">
+                        <p>AUG 5</p>
+                        <h3>$20.21</h3>
+                    </section>
+                </article>
+
+                <article class="order-item">
+                    <span class="color-indicator"></span>
+                    <section class="item-info">
+                        <h2>Cocopops Cereal</h2>
+                        <p class="item-meta"><span>SN90500</span><span>12:50 PM</span></p>
+                    </section>
+                    <section class="item-price">
+                        <p>AUG 5</p>
+                        <h3>$15.00</h3>
+                    </section>
+                </article>
+
+                <hr class="divider">
+
+                <dl class="summary-totals">
+                    <dt>Subtotal</dt> <dd>$50.00</dd>
+                    <dt>Taxes & Fees</dt> <dd>$10.00</dd>
+                    <dt>Promo Code - 1E5344505</dt> <dd>-$30%</dd>
+                    <dt class="total-label">Total</dt> <dd class="total-amount">$42.00</dd>
+                </dl>
+
+                <footer class="summary-footer">
+                    <a href="/l2/html/index.html" class="back-link">&#8592; Previous page</a>
+                </footer>
+            </section>
+        </aside>
+
+        <section class="right-panel-form">
+            <form action="/l2/html/index.html" class="checkout-form">
+                
+                <button type="button" class="btn-paypal">Pay with PayPal</button>
+                
+                <p class="separator">Or pay with card</p>
+
+                <fieldset class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </fieldset>
+
+                <fieldset class="form-group card-fieldset">
+                    <label for="card-number">Card information</label>
+                    <section class="custom-input-wrapper top-box">
+                        <input type="text" id="card-number" placeholder="1234 1234 1234 1234" required>
+                        <span class="card-icons">
+                            <img src="../assects/visa.svg" alt="Visa">
+                            <img src="../assects/mastercard.svg" alt="Mastercard">
+                        </span>
+                    </section>
+                    <section class="split-inputs">
+                        <input type="text" placeholder="MM / YY" required class="bottom-left-box">
+                        <section class="custom-input-wrapper bottom-right-box">
+                            <input type="text" placeholder="CVC" required>
+                            <img src="../assects/cvc.svg" alt="CVC Info" class="input-icon">
+                        </section>
+                    </section>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="card-name">Name on card</label>
+                    <input type="text" id="card-name" required>
+                </fieldset>
+
+                <fieldset class="form-group country-fieldset">
+                    <label for="country">Country or region</label>
+                    <select id="country" required class="top-box">
+                        <option value="US">United States</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="PL">Poland</option>
+                    </select>
+                    <input type="text" placeholder="ZIP" required class="bottom-box">
+                </fieldset>
+
+                <button type="submit" class="btn-primary">Pay $42.00</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
