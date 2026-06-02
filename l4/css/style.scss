@@ -1,0 +1,216 @@
+$red: #FF5C5C;
+$very-dark-blue: #242942;
+$dark-grayish-blue: #5B5F71;
+$grayish-blue: #A0A1AC;
+$light-grayish-blue: #EEF3F6;
+
+$font-condensed: 'Barlow Condensed', sans-serif;
+$font-base: 'Barlow', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-base;
+    color: $dark-grayish-blue;
+    background-color: white;
+    overflow-x: hidden; 
+}
+
+h1, .nav__link, .button, .hero__badge {
+    font-family: $font-condensed;
+    text-transform: uppercase;
+}
+
+.header {
+    padding: 3rem 10% 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__brand img {
+        height: 25px;
+    }
+
+    &__toggle {
+        display: none; 
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $very-dark-blue;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+
+        &--muted {
+            color: $grayish-blue;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__separator {
+        width: 6px;
+        height: 6px;
+        background-color: $grayish-blue;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+}
+
+.main {
+    padding: 3rem 0 3rem 10%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__content {
+        flex: 1;
+        max-width: 500px;
+        padding-top: 2rem;
+    }
+
+    &__badge {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+        color: $grayish-blue;
+        font-weight: 400;
+
+        &-tag {
+            background-color: $very-dark-blue;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+        line-height: 1;
+        color: $very-dark-blue;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+        color: $dark-grayish-blue;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__note {
+        color: $grayish-blue;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__illustration {
+        flex: 1;
+        position: relative;
+        
+        img {
+            width: 140%;
+            display: block;
+        }
+    }
+}
+
+.button {
+    background-color: $red;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .main {
+        padding: 0 5% 3rem;
+    }
+
+    .nav {
+        &__list {
+            display: none;
+        }
+
+        &__toggle {
+            display: block;
+        }
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        text-align: center;
+
+        &__content {
+            max-width: 100%;
+            padding-top: 0;
+        }
+
+        &__badge {
+            justify-content: center;
+        }
+
+        &__actions {
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 2.8rem;
+        }
+
+        &__illustration {
+            img {
+                width: 110%;
+                margin-left: 5%;
+            }
+        }
+    }
+}
