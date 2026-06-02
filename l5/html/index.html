@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <dialog open class="app-window">
+    
+    <aside class="sidebar-menu">
+      <header class="logo-area">
+        <i class="fa-solid fa-pizza-slice logo-animated"></i>
+      </header>
+      <nav class="nav-links">
+        <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+      </nav>
+      <footer class="sidebar-footer">
+        <i class="fa-solid fa-circle-question" title="Допомога"></i>
+      </footer>
+    </aside>
+
+    <main class="main-content">
+      
+      <header class="content-header">
+        <button class="burger-menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        <form class="search-form" onsubmit="event.preventDefault();">
+          <label for="search-input"><i class="fa-solid fa-magnifying-glass"></i></label>
+          <input type="search" id="search-input" placeholder="Busca algo de nuestro menu...">
+        </form>
+      </header>
+
+      <section class="categories-section">
+        <h2>Categorias</h2>
+        <p class="subtitle">Elige nuestras deliciosas pizzas</p>
+        
+        <nav class="categories-grid">
+          <button class="category-item active">
+            <span class="cat-icon"><i class="fa-solid fa-pizza-slice"></i></span>
+            Pizzas
+          </button>
+          <button class="category-item">
+            <span class="cat-icon"><i class="fa-solid fa-stroopwafel"></i></span>
+            Empanadas
+          </button>
+          <button class="category-item">
+            <span class="cat-icon"><i class="fa-solid fa-wine-glass"></i></span>
+            Bebidas
+          </button>
+          <button class="category-item">
+            <span class="cat-icon"><i class="fa-solid fa-ice-cream"></i></span>
+            Postres
+          </button>
+        </nav>
+      </section>
+
+      <section class="products-section">
+        <ol class="products-grid">
+          
+          <li class="product-card">
+            <figure class="product-img">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=400" alt="Pizza muzzarella">
+            </figure>
+            <article class="product-info">
+              <h3>Pizza muzzarella</h3>
+              <footer class="product-footer">
+                <data value="1200" class="price">$ 1200.00</data>
+                <button class="btn-add active" aria-label="Add to cart"><i class="fa-solid fa-plus"></i></button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="product-card">
+            <figure class="product-img">
+              <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=400" alt="Pizza pepperoni">
+            </figure>
+            <article class="product-info">
+              <h3>Pizza pepperoni</h3>
+              <footer class="product-footer">
+                <data value="1100" class="price">$ 1100.00</data>
+                <button class="btn-add" aria-label="Add to cart"><i class="fa-solid fa-plus"></i></button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="product-card">
+            <figure class="product-img">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=400" alt="Pizza napolitana">
+            </figure>
+            <article class="product-info">
+              <h3>Pizza napolitana</h3>
+              <footer class="product-footer">
+                <data value="1050" class="price">$ 1050.00</data>
+                <button class="btn-add" aria-label="Add to cart"><i class="fa-solid fa-plus"></i></button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="product-card">
+            <figure class="product-img">
+              <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=400" alt="Pizza jamón y morrón">
+            </figure>
+            <article class="product-info">
+              <h3>Pizza jamón y morrón</h3>
+              <footer class="product-footer">
+                <data value="900" class="price">$ 900.00</data>
+                <button class="btn-add" aria-label="Add to cart"><i class="fa-solid fa-plus"></i></button>
+              </footer>
+            </article>
+          </li>
+
+        </ol>
+      </section>
+    </main>
+
+    <aside class="checkout-panel">
+      <header class="checkout-header">
+        <h2>Mi orden</h2>
+        <button class="close-btn" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+
+      <section class="checkout-box">
+        <h3>Checkout</h3>
+        <p class="sub">Confirme su pedido</p>
+
+        <aside class="alert-info">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>El pago se efectuará al llegar la orden, específicamente en efectivo y el envío es propio del negocio. Al finalizar el checkout le llegará el recibo vía whatsapp.</p>
+        </aside>
+
+        <form class="checkout-form" onsubmit="event.preventDefault();">
+          <fieldset class="form-fieldset">
+            <p class="form-group">
+              <label for="username">Ingrese su nombre *</label>
+              <input type="text" id="username" value="John Doe" required>
+            </p>
+            <p class="form-group">
+              <label for="userphone">Ingrese su número de teléfono *</label>
+              <input type="tel" id="userphone" value="11 9999-9999" required>
+            </p>
+            <p class="form-group">
+              <label for="userid">Ingrese su documento de identidad</label>
+              <input type="text" id="userid" value="99.999.999">
+            </p>
+          </fieldset>
+          
+          <button type="submit" class="btn-submit">Generar recibo</button>
+        </form>
+      </section>
+    </aside>
+
+  </dialog>
+
+</body>
+</html>
